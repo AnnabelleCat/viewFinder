@@ -45,49 +45,92 @@
             </objects>
             <point key="canvasLocation" x="824.63768115942037" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Photo View Controller-->
         <scene sceneID="Mj2-V5-7LI">
             <objects>
-                <viewController id="3qM-8K-ljj" sceneMemberID="viewController">
+                <viewController id="3qM-8K-ljj" customClass="AddPhotoViewController" customModule="anikaViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sxp-Sj-L4Z">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W3f-je-CBz">
+                                <rect key="frame" x="0.0" y="70" width="834" height="632"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30481871962547302" green="0.70445215702056885" blue="0.64144623279571533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.92540901900000005" green="0.92554211620000004" blue="0.92537993190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-ib-g88">
+                                <rect key="frame" x="0.0" y="699" width="281" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88616091012954712" green="0.49056434631347656" blue="0.37329655885696411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGh-2R-Qj6">
+                                <rect key="frame" x="278" y="699" width="284" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91010701656341553" green="0.65969705581665039" blue="0.48098140954971313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIW-rm-kBo">
+                                <rect key="frame" x="559" y="699" width="275" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76556450128555298" green="0.55208611488342285" blue="0.61543554067611694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2W-dj-2BD">
-                                <rect key="frame" x="359" y="104" width="88" height="30"/>
+                                <rect key="frame" x="373" y="808" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PhotoLibrary"/>
+                                <connections>
+                                    <action selector="photoLibrary:" destination="3qM-8K-ljj" eventType="touchUpInside" id="E8z-Xc-WoM"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StCroixHairSheep-1200x800" translatesAutoresizingMaskIntoConstraints="NO" id="KLw-CS-kTb">
-                                <rect key="frame" x="283" y="192" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-85-KT6">
+                                <rect key="frame" x="620" y="808" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="Albums:" destination="3qM-8K-ljj" eventType="touchUpInside" id="PGY-hm-6w3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86i-zZ-FYS">
+                                <rect key="frame" x="144" y="131" width="590" height="381"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52154058218002319" green="0.80428576469421387" blue="0.79577261209487915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StCroixHairSheep-1200x800" translatesAutoresizingMaskIntoConstraints="NO" id="KLw-CS-kTb">
+                                <rect key="frame" x="73" y="96" width="689" height="396"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjG-SP-0mw">
-                                <rect key="frame" x="355" y="361" width="97" height="30"/>
+                                <rect key="frame" x="260" y="575" width="315" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjg-3h-Lb7">
-                                <rect key="frame" x="390" y="435" width="34" height="30"/>
+                                <rect key="frame" x="386" y="653" width="85" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="37"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="3qM-8K-ljj" eventType="touchUpInside" id="JEt-31-EGZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc0-Zi-Kby">
-                                <rect key="frame" x="69" y="120" width="54" height="30"/>
+                                <rect key="frame" x="156" y="808" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-85-KT6">
-                                <rect key="frame" x="676" y="120" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="Camera:" destination="3qM-8K-ljj" eventType="touchUpInside" id="viA-SN-rsh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="R2s-A7-rco"/>
                     </view>
+                    <connections>
+                        <outlet property="Caption" destination="vjG-SP-0mw" id="OMU-H6-CMu"/>
+                        <outlet property="imageDisplay" destination="KLw-CS-kTb" id="aJ4-kt-sFO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mm5-l2-FvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
