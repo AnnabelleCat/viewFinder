@@ -17,9 +17,6 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.delegate = self
     }
     
-    @IBAction func savePhoto(_ sender: UIButton) {
-    }
-    
     @IBAction func Camera(_ sender: UIButton) {
         imagePicker.sourceType = .camera
         
@@ -37,6 +34,25 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func Albums(_ sender: UIButton) {
     }
     
+    @IBAction func savePhoto(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            let newCDPhoto = Photos(entity: Photos.entity(), insertInto: context)
+            
+            newCDPhoto.caption = Caption.text
+            
+            if let userImage = imageDisplay.image {
+                
+                if let userImageData = userImage.pngData() {
+                    newCDPhoto.imageData = userImageData
+                }
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            
+            navigationController?.popViewController(animated: true)
+        }
+
+    }
     
     @IBOutlet weak var Caption: UITextField!
 
